@@ -1,11 +1,13 @@
-def quoter():
-  print("Keep it logically awesome.")
+import random
 
-  #f = open("quotes.txt")
-  #quotes = f.readlines()
-  #f.close()
+def quote_bot():
 
-  #print(quotes)
+  f = open("quotes.txt")
+  quotes = f.readlines()
+  f.close()
+
+  last = len(quotes) - 1   
+  print(quotes[random.randint(0, last)])
 
 if __name__== "__main__":
-  quoter()
+  quote_bot()
